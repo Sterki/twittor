@@ -11,7 +11,7 @@ const INMUTABLE_CACHE = "inmutable-cache-v1";
 self.addEventListener("install", (e) => {
   const cachestatic = caches.open(STATIC_CACHE).then((cache) => {
     cache.addAll([
-      "/",
+      // "/",
       "index.html",
       "css/style.css",
       "js/app.js",

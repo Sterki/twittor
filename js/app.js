@@ -1,8 +1,14 @@
+var url = window.location.href;
+var swLocation = "/twittor/serviceworker.js";
+
 // configurar y preguntar si es que se puede ejecutar service workers en el navegador actual
 
 if (navigator.serviceWorker) {
   // registrar el service worker
-  navigator.serviceWorker.register("/serviceworker.js");
+  if (url.includes("localhost")) {
+    swLocation = "/serviceworker.js";
+  }
+  navigator.serviceWorker.register(swLocation);
 }
 
 // Referencias de jQuery
