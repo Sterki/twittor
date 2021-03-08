@@ -8,6 +8,7 @@ if (navigator.serviceWorker) {
   if (url.includes("localhost")) {
     swLocation = "/serviceworker.js";
   }
+  // todo esto para poder verificar la url del navegador y verificar si estamos desde la web o localmente
   navigator.serviceWorker.register(swLocation);
 }
 
