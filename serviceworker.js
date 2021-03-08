@@ -2,7 +2,7 @@
 importScripts("js/sw-utils.js");
 
 // variables de los caches name
-const STATIC_CACHE = "static-cache-v2";
+const STATIC_CACHE = "static-cache-v3";
 const DYNAMIC_CACHE = "dynamic-cache-v1";
 const INMUTABLE_CACHE = "inmutable-cache-v1";
 
