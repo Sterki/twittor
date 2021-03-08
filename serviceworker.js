@@ -2,8 +2,8 @@
 importScripts("js/sw-utils.js");
 
 // variables de los caches name
-const STATIC_CACHE = "static-cache-v3";
-const DYNAMIC_CACHE = "dynamic-cache-v1";
+const STATIC_CACHE = "static-cache-v4";
+const DYNAMIC_CACHE = "dynamic-cache-v2";
 const INMUTABLE_CACHE = "inmutable-cache-v1";
 
 // aqui vamos a instalar el service worker con toda la informacion detallada en sus respectivos caches, para llevar un orden de todo
@@ -41,6 +41,9 @@ self.addEventListener("activate", (e) => {
   const deleteCache = caches.keys().then((keys) => {
     keys.forEach((key) => {
       if (key !== STATIC_CACHE && key.includes("static")) {
+        return caches.delete(key);
+      }
+      if (key !== DYNAMIC_CACHE && key.includes("dynamic")) {
         return caches.delete(key);
       }
     });
