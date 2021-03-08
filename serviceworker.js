@@ -2,8 +2,8 @@
 importScripts("js/sw-utils.js");
 
 // variables de los caches name
-const STATIC_CACHE = "static-cache-v4";
-const DYNAMIC_CACHE = "dynamic-cache-v2";
+const STATIC_CACHE = "static-cache-v5";
+const DYNAMIC_CACHE = "dynamic-cache-v3";
 const INMUTABLE_CACHE = "inmutable-cache-v1";
 
 // aqui vamos a instalar el service worker con toda la informacion detallada en sus respectivos caches, para llevar un orden de todo
